@@ -1,0 +1,77 @@
+<LinearLayout android:orientation="horizontal" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_key"
+    android:padding="6dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50dp"
+        android:layout_height="53dp"
+        android:contentDescription="TODO"
+        android:focusable="false"
+        android:background="@drawable/default_avatar"
+        android:layout_marginRight="5dp" />
+
+    <LinearLayout android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewLinear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_key"
+        android:paddingLeft="6dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="5dp">
+
+        <LinearLayout android:orientation="horizontal" xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/viewLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_key">
+
+            <TextView
+                android:id="@+id/firstLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                android:textSize="12sp"
+                android:textColor="#494949"
+                android:textStyle="bold"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/msgDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Date"
+                android:textSize="12sp"
+                android:textColor="#494949"
+                android:focusable="false" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/unreadCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Unread:10"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/secondLine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:text="Description"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="false"
+            android:focusable="false"/>
+
+    </LinearLayout>
+</LinearLayout>

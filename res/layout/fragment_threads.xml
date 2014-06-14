@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cecece"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:clickable="true"
+    android:baselineAligned="false">
+
+    <ListView android:id="@+id/thread_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#cecece"
+        android:dividerHeight="0.3dp"
+        android:choiceMode="singleChoice"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:longClickable="true" />
+</LinearLayout>

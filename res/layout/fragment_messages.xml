@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cecece"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+    android:longClickable="true">
+
+    <ListView android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawSelectorOnTop="false"
+        android:divider="#cecece"
+        android:dividerHeight="0.3dp"
+        android:background="@android:color/background_light"
+        android:choiceMode="singleChoice"
+        android:layout_gravity="fill"
+        android:padding="1sp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cecece"
+        android:paddingTop="5dp"
+        android:paddingLeft="3dp"
+        android:paddingBottom="3dp">
+
+        <EditText android:id="@+id/edit_message"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@android:drawable/edit_text"
+        android:textColor="@android:color/black"
+        android:inputType="text|textImeMultiLine|textMultiLine|textAutoCorrect|textCapSentences"
+        android:selectAllOnFocus="true"
+        android:autoLink="web"
+        android:singleLine="false"
+        android:hint="send message"
+        android:focusable="true"
+        android:clickable="true"
+        android:textIsSelectable="true" />
+
+        <ImageButton
+            style="@style/Widget.AppCompat.ActionButton"
+            android:id="@+id/send_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_send_now"
+            android:cropToPadding="false"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" />
+
+        <requestFocus />
+    </LinearLayout >
+
+</LinearLayout>

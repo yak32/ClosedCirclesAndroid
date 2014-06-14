@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:closedcircles="http://schemas.android.com/apk/res-auto" >
+    <item android:id="@+id/action_copy_text"
+        android:title="@string/action_copy_text"
+        closedcircles:showAsAction="never" />
+    <item android:id="@+id/action_delete"
+        android:title="@string/action_delete"
+        closedcircles:showAsAction="ifRoom" />
+    <item android:id="@+id/action_user_info"
+        android:title="@string/action_user_info"
+        closedcircles:showAsAction="ifRoom" />
+</menu>

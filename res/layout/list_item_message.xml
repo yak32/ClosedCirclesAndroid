@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/bg_key"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/id_msgAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#737373"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:text="Author" />
+    <TextView
+        android:id="@+id/id_msgText"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:autoLink="web"
+        android:padding="1sp"
+        android:text="First row\nSecond row\nwww.google.com\nForth Row" />
+    <TextView
+        android:id="@+id/id_msgDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#737373"
+        android:singleLine="true"
+        android:gravity="right"
+        android:text="Date" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pressed_color">#d2d2e7</color>
+    <color name="default_color">#ffffff</color>
+    <color name="selection_color">#d2d2e7</color>
+    <color name="read_color">#e4e4e4</color>
+</resources>

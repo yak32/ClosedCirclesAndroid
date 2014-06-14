@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:closedcircles="http://schemas.android.com/apk/res-auto" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_new_thread"
+        android:icon="@drawable/ic_action_new_event"
+        android:title="@string/action_new_event"
+        closedcircles:showAsAction="ifRoom" />
+    <item android:id="@+id/action_closed_mode"
+        android:icon="@drawable/ic_action_not_secure"
+        closedcircles:showAsAction="ifRoom"
+        android:title="@string/action_set_open_mode"/>
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@id/action_new_thread"
+        android:title="@string/action_new_event"/>
+    <item android:id="@+id/action_closed_mode2"
+        android:title="@string/action_set_open_mode"/>
+    <item android:id="@+id/action_mark_all_read"
+        android:title="@string/action_mark_all_read"/>
+    <item android:id="@+id/action_logout"
+        android:title="@string/action_logout"
+        closedcircles:showAsAction="never" />
+
+</menu>
