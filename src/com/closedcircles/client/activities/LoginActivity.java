@@ -75,7 +75,7 @@ public class LoginActivity extends Activity implements
     private boolean mFirstTimeAuth = true;
     private static final int REQUEST_CODE_TOKEN_AUTH = 9001;
     private final static String GOOGLE_AUTH_SCOPES =
-            "oauth2:https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email";
+            "oauth2:https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email  https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login";
 
     public static final String INTENT_AUTHORIZED = "Authorized";
     public static final String INTENT_EXTRA_AUTH_TYPE = "authType";

@@ -2,7 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="10dp"
+    android:paddingTop="2dp"
     android:descendantFocusability="blocksDescendants"
     android:background="@drawable/bg_key"
     android:paddingLeft="10dp"

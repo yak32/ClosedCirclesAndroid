@@ -45,6 +45,7 @@ public class WebConnectionManager {
 
     private Handler mHandler = new Handler();
     private Runnable mTimer = null;
+    private int mReloadCount = 0;
 
     public final static int HISTORY_LENGTH = 10;
     private ProgressDialog mProgressDialog = null;
@@ -52,6 +53,7 @@ public class WebConnectionManager {
     private boolean mPause = true;
     public final static int MESSAGE_MAKE_READ_TIME = 1; // 1 second to read messages
     public final static int RESTART_UPDATES_TIME = 60; // 60 sec
+    public final static int MAX_RELOAD_TOKEN_COUNT = 2;
 
     protected WebConnectionManager() {
     }
@@ -102,13 +104,20 @@ public class WebConnectionManager {
     }
     public Context getContext() { return mContext; }
     public void reloadToken() {
-        if (mContext == null) return;
+        if (mContext == null ) return;
+        boolean signOut = false;
+        if ( mReloadCount >= MAX_RELOAD_TOKEN_COUNT ) {
+            signOut = true;
+            mReloadCount = 0;
+        }
+        else
+            mReloadCount ++;
         //Toast.makeText(mContext, "reload Token", Toast.LENGTH_LONG).show();
         mFailedUpdateCount = 0;
         Log.w(getClass().getName(), "reloadToken...");
         if (checkConnection() && !mPause ) {  // reload token only if we have connection
             if (mActivity != null) {
-                mActivity.startLogin(false);
+                mActivity.startLogin(signOut);
             }
         } else
             onConnectionLost();
@@ -205,6 +214,8 @@ public class WebConnectionManager {
             // pending
             long initial_circle = -1;
             try {
+                mReloadCount = 0;  // successful login - we can clear reload count
+
                 JSONObject currentCircle = initial.getJSONObject("currentCircle");
                 initial_circle = currentCircle.getLong("id");
                 postInitialCircles(initial.getJSONArray("circles"), initial.getLong("notificationCursor"), initial.getString(WebConnection.PARAM_SERVER_VERSION));
